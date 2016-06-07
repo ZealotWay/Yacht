@@ -6,7 +6,8 @@
  * Time: 10:31
  */
 // 记录开始运行时间
-$GLOBALS['_beginTime'] = microtime(TRUE);
+$GLOBALS['_beginTime'] = microtime(TRUE);  // 可用$_SERVER['REQUEST_TIME_FLOAT']代替
+
 // 记录内存初始使用
 define('MEMORY_LIMIT_ON',function_exists('memory_get_usage'));
 if(MEMORY_LIMIT_ON) $GLOBALS['_startUseMems'] = memory_get_usage();
